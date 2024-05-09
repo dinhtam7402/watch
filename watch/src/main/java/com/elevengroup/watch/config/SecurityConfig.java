@@ -47,7 +47,8 @@ public class SecurityConfig {
                         .requestMatchers("/**").permitAll()
         )
                 .formLogin(login ->
-                        login.usernameParameter("username")
+                        login
+                                .usernameParameter("username")
                                 .successHandler(authSuccessHandler)
                                 .permitAll()
                 )

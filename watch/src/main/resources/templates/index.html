@@ -1,90 +1,78 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Đồng Hồ Chính Hãng</title>
-    <!-- MDB icon -->
-    <link rel="icon" th:href="@{/img/mdb-favicon.ico}" type="image/x-icon" />
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css}"
-    />
-    <!-- Google Fonts Roboto -->
-    <link
-      rel="stylesheet"
-      th:href="@{https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap}"
-    />
-    <!-- MDB -->
-    <link rel="stylesheet" th:href="@{/css/mdb.min.css}" />
-  </head>
-  <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary" th:fragment="navbar">
-      <!-- Container wrapper -->
-      <div class="container-fluid">
-  
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Đồng Hồ Chính Hãng</title>
+  <!-- MDB icon -->
+  <link rel="icon" th:href="@{/img/mdb-favicon.ico}" type="image/x-icon" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css}" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet"
+    th:href="@{https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap}" />
+  <!-- MDB -->
+  <link rel="stylesheet" th:href="@{/css/mdb.min.css}" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+
       <!-- Collapsible wrapper -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin: 20px 20px 20px 50px;">
-          <!-- Navbar brand -->
-          <a class="navbar-brand mt-2 mt-lg-0" th:href="@{/}">
-          <img
-              src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
-              height="50"
-              alt="MDB Logo"
-              loading="lazy"
-          />
-          </a>
+        <!-- Navbar brand -->
+        <a class="navbar-brand mt-2 mt-lg-0" th:href="@{/}">
+          <img src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp" height="50" alt="MDB Logo"
+            loading="lazy" />
+        </a>
       </div>
       <!-- Collapsible wrapper -->
 
       <div class="container-fluid">
-          <div class="d-flex align-items-center" style="margin-bottom: 10px;">
-              <div class="ms-auto" style="font-size: 12px">
-                  <a class="text-muted" th:href="@{/login}">Đăng nhập</a>
-                  <span class="text-muted">|</span>
-                  <a class="text-muted" th:href="@{/signup}">Đăng ký</a>
-              </div>
+        <div class="d-flex align-items-center" style="margin-bottom: 10px;">
+          <div class="ms-auto" style="font-size: 12px">
+            <a class="text-muted" th:href="@{/login}">Đăng nhập</a>
+            <span class="text-muted">|</span>
+            <a class="text-muted" th:href="@{/signup}">Đăng ký</a>
           </div>
-          <form class="d-flex input-group w-auto" action="/search" method="GET" style="margin: 20px;">
-            <input
-              type="search"
-              class="form-control rounded"
-              placeholder="Search"    
-              aria-label="Search"
-              aria-describedby="search-addon"
-              name="q"
-            />
-            <button class="btn btn-outline-secondary" type="submit" id="search-addon">
-              <i class="fas fa-search"></i>
-            </button>
-          </form>
         </div>
-        
-  
+        <form class="d-flex input-group w-auto" action="/search" method="GET" style="margin: 20px;">
+          <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+            aria-describedby="search-addon" name="q" />
+          <button class="btn btn-outline-secondary" type="submit" id="search-addon">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
+
+
       <!-- Right elements -->
       <div class="d-flex align-items-center" style="margin: 20px 50px 20px 20px;">
-          <!-- Icon -->
-          <a class="text-reset me-3" th:href="@{/cart}" style="font-size: 30px;">
+        <!-- Icon -->
+        <a class="text-reset me-3" th:href="@{/cart}" style="font-size: 30px;">
           <i class="fas fa-shopping-cart"></i>
-          </a>
+        </a>
       </div>
       <!-- Right elements -->
-      </div>
-      <!-- Container wrapper -->
+    </div>
+    <!-- Container wrapper -->
   </nav>
   <!-- Navbar -->
-    <!-- Start your project here-->
-    <div class="container">
+  <!-- Start your project here-->
+  <div class="container">
 
-    </div>
-    <!-- End your project here-->
+  </div>
+  <!-- End your project here-->
 
-    <!-- MDB -->
-    <script type="text/javascript" th:src="@{/js/mdb.umd.min.js}"></script>
-    <!-- Custom scripts -->
-    <script type="text/javascript"></script>
-  </body>
+  <!-- MDB -->
+  <script type="text/javascript" th:src="@{/js/mdb.umd.min.js}"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript"></script>
+</body>
+
 </html>
