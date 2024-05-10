@@ -1,4 +1,4 @@
-package com.elevengroup.watch.config;
+package com.elevengroup.watch.component;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

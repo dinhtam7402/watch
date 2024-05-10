@@ -1,4 +1,4 @@
-package com.elevengroup.watch.config;
+package com.elevengroup.watch.component;
 
 import com.elevengroup.watch.entity.Customer;
 import com.elevengroup.watch.repository.CustomersRepository;

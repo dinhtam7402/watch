@@ -35,11 +35,18 @@
 
       <div class="container-fluid">
         <div class="d-flex align-items-center" style="margin-bottom: 10px;">
-          <div class="ms-auto" style="font-size: 12px">
-            <a class="text-muted" th:href="@{/login}">Đăng nhập</a>
-            <span class="text-muted">|</span>
-            <a class="text-muted" th:href="@{/signup}">Đăng ký</a>
-          </div>
+          <th:block sec:authorize="!isAuthenticated">
+            <div class="ms-auto" style="font-size: 12px">
+              <a class="text-muted" th:href="@{/login}">Đăng nhập</a>
+              <span class="text-muted">|</span>
+              <a class="text-muted" th:href="@{/signup}">Đăng ký</a>
+            </div>
+          </th:block>
+          <th:block sec:authorize="isAuthenticated">
+            <div class="ms-auto" style="font-size: 12px">
+              <a class="text-muted" th:href="@{/logout}">Đăng xuất</a>
+            </div>
+          </th:block>
         </div>
         <form class="d-flex input-group w-auto" action="/search" method="GET" style="margin: 20px;">
           <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
