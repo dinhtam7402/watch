@@ -17,4 +17,14 @@ public class AuthController {
         return "signup";
     }
 
+    @RequestMapping(value = "/login")
+    public String viewLogin() {
+        return "login";
+    }
+
+    @RequestMapping(value = "/logout")
+    public String viewLogout() {
+        return "redirect:/";
+    }
+
 }
