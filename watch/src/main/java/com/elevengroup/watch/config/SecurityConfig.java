@@ -2,7 +2,7 @@ package com.elevengroup.watch.config;
 
 import com.elevengroup.watch.component.AuthSuccessHandler;
 //import com.elevengroup.watch.component.LoginInterceptor;
-import com.elevengroup.watch.service.CustomUserDetailsService;
+import com.elevengroup.watch.service.CustomUserDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,12 +13,10 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
-import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 @EnableWebSecurity
-public class SecurityConfig implements WebMvcConfigurer {
+public class SecurityConfig{
     @Autowired
     private AuthSuccessHandler authSuccessHandler;
 
@@ -29,7 +27,7 @@ public class SecurityConfig implements WebMvcConfigurer {
 
     @Bean
     public UserDetailsService userDetailsService() {
-        return new CustomUserDetailsService();
+        return new CustomUserDetailService();
     }
 
     @Bean

@@ -44,7 +44,24 @@
           </th:block>
           <th:block sec:authorize="isAuthenticated">
             <div class="ms-auto" style="font-size: 12px">
-              <a class="text-muted" th:href="@{/logout}">Đăng xuất</a>
+              <div class="dropdown">
+                <a data-mdb-dropdown-init class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
+                  id="navbarDropdownMenuAvatar" role="button" aria-expanded="false">
+                  <i class="fas fa-circle-user"></i>
+                  <span style="margin-left: 8px;">[[${username}]]</span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
+                  <li>
+                    <a class="dropdown-item" href="#">My profile</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Settings</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" th:href="@{/logout}">Đăng xuất</a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </th:block>
         </div>

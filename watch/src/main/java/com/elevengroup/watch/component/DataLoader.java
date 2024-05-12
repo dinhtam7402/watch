@@ -1,7 +1,7 @@
 package com.elevengroup.watch.component;
 
-import com.elevengroup.watch.entity.Customer;
-import com.elevengroup.watch.repository.CustomersRepository;
+import com.elevengroup.watch.entity.User;
+import com.elevengroup.watch.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -14,25 +14,25 @@ public class DataLoader implements CommandLineRunner {
     BCryptPasswordEncoder passwordEncoder;
 
     @Autowired
-    CustomersRepository customersRepository;
+    UserRepository userRepository;
 
     @Override
     public void run(String... args) throws Exception {
-        if (customersRepository.count() == 0) {
-            Customer admin = new Customer();
+        if (userRepository.count() == 0) {
+            User admin = new User();
             admin.setUserName("admin");
             admin.setPassword(passwordEncoder.encode("123"));
             admin.setRole("ADMIN");
 
-            customersRepository.save(admin);
+            userRepository.save(admin);
         }
-        if (customersRepository.count() == 1) {
-            Customer staff = new Customer();
+        if (userRepository.count() == 1) {
+            User staff = new User();
             staff.setUserName("staff");
             staff.setPassword(passwordEncoder.encode("123"));
             staff.setRole("USER");
 
-            customersRepository.save(staff);
+            userRepository.save(staff);
         }
     }
 }

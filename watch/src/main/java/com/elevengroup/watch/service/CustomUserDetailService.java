@@ -1,22 +1,24 @@
 package com.elevengroup.watch.service;
 
-import com.elevengroup.watch.entity.Customer;
-import com.elevengroup.watch.repository.CustomersRepository;
+import com.elevengroup.watch.entity.User;
+import com.elevengroup.watch.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
 
-public class CustomUserDetailsService implements UserDetailsService {
+@Service
+public class CustomUserDetailService implements UserDetailsService {
     @Autowired
-    private CustomersRepository customersRepository;
+    private UserRepository userRepository;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Customer user = customersRepository.findByUserName(username);
+        User user = userRepository.findByUserName(username);
         if (user == null) {
             throw new UsernameNotFoundException("User not found");
         }
-        return new CustomUserDetails(user);
+        return new CustomUserDetail(user);
     }
 }

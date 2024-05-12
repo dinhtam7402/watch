@@ -5,18 +5,19 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.io.Serializable;
-import java.util.Collection;
-
 @Entity
-@Data
 @Getter
 @Setter
-public class Category {
+@Data
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private String nameVN;
-    private String name;
+    @Column(name = "username")
+    private String userName;
+    @Column(name = "password")
+    private String password;
+    @Column(name = "role")
+    private String role;
 }
