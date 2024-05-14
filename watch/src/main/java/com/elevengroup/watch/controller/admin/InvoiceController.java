@@ -29,6 +29,6 @@ public class InvoiceController {
         model.addAttribute("totalPages", pageTuts.getTotalPages());
         model.addAttribute("pageSize", size);
 
-        return "admin/invoice";
+        return "admin/invoice/invoice";
     }
 }

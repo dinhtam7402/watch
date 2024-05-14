@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8" />
@@ -20,47 +20,11 @@
 <body>
 
     <!-- Sidebar -->
-    <nav id="sidebarMenu" class="position-fixed navbar navbar-expand-lg navbar-light bg-white">
-        <div class="position-sticky">
-            <div class="list-group list-group-flush mx-3 mt-4">
-                <a th:href="@{/admin/}" class="list-group-item list-group-item-action py-2" data-mdb-ripple-init
-                    aria-current="true">
-                    <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Dashboard</span></a>
-                <a href="#" class="list-group-item list-group-item-action py-2" data-mdb-ripple-init><i
-                        class="fas fa-user-plus fa-fw me-3"></i><span>Tài khoản</span></a>
-                <a th:href="@{/admin/brand/}" class="list-group-item list-group-item-action py-2"
-                    data-mdb-ripple-init><i class="fas fa-copyright fa-fw me-3"></i><span>Thương hiệu</span></a>
-                <a th:href="@{/admin/customer/}" class="list-group-item list-group-item-action py-2" data-mdb-ripple-init><i
-                        class="fas fa-person fa-fw me-3"></i><span>Khách hàng</span></a>
-                <a th:href="@{/admin/product/}" class="list-group-item list-group-item-action py-2" data-mdb-ripple-init><i
-                        class="fab fa-product-hunt fa-fw me-3"></i><span>Sản phẩm</span></a>
-                <a th:href="@{/admin/invoice/}" class="list-group-item list-group-item-action py-2" data-mdb-ripple-init><i
-                        class="fas fa-file-invoice-dollar fa-fw me-3"></i><span>Hóa đơn</span></a>
-            </div>
-        </div>
-    </nav>
+    <nav th:replace="admin/fragments/navbar :: sidebaradmin"></nav>
     <!-- Sidebar -->
 
     <!-- Navbar -->
-    <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-        <!-- Container wrapper -->
-        <div class="container-fluid">
-            <!-- Brand -->
-            <a class="navbar-brand" th:href="@{/}" style="margin: 0 15px;">
-                <img th:src="@{https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png}" height="32" alt=""
-                    loading="lazy" />
-            </a>
-
-            <div class="d-flex align-items-center" style="margin: 0 15px;">
-                <div class="ms-auto" style="font-size: 24px">
-                    <a class="text-muted" th:href="@{/logout}">
-                        <i class="fas fa-right-from-bracket"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <!-- Container wrapper -->
-    </nav>
+    <nav th:replace="admin/fragments/navbar :: navbaradmin"></nav>
     <!-- Navbar -->
 
     <main style="margin-left: 215px; margin-top: 58px;">
@@ -72,20 +36,20 @@
             <table class="table table-striped table-hover">
                 <thead class="table-info">
                     <tr>
-                        <th>Mã Thương Hiệu</th>
-                        <th>Tên Thương Hiệu</th>
+                        <th>Mã Khách Hàng</th>
+                        <th>Họ Tên Khách Hàng</th>
                         <th>Số Điện Thoại</th>
-                        <th>Địa Chỉ</th>
                         <th>Email</th>
+                        <th>Địa Chỉ</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr th:each="brand : ${brands}">
-                        <td>[[${brand.maThuongHieu}]]</td>
-                        <td>[[${brand.tenThuongHieu}]]</td>
-                        <td>[[${brand.soDienThoai}]]</td>
-                        <td>[[${brand.diaChi}]]</td>
-                        <td>[[${brand.email}]]</td>
+                    <tr th:each="customer : ${customers}">
+                        <td>[[${customer.maKhachHang}]]</td>
+                        <td>[[${customer.hoTen}]]</td>
+                        <td>[[${customer.soDienThoai}]]</td>
+                        <td>[[${customer.email}]]</td>
+                        <td>[[${customer.diaChi}]]</td>
                     </tr>
                 </tbody>
             </table>

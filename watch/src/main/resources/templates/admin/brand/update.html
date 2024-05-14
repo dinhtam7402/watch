@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Đồng Hồ Chính Hãng</title>
+    <!-- MDB icon -->
+    <link rel="icon" th:href="@{/img/mdb-favicon.ico}" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css}" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet"
+        th:href="@{https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap}" />
+    <!-- MDB -->
+    <link rel="stylesheet" th:href="@{/css/mdb.min.css}" />
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <nav th:replace="admin/fragments/navbar :: sidebaradmin"></nav>
+    <!-- Sidebar -->
+
+    <!-- Navbar -->
+    <nav th:replace="admin/fragments/navbar :: navbaradmin"></nav>
+    <!-- Navbar -->
+
+    <main style="margin-left: 215px; margin-top: 58px;">
+        <!-- Nội dung của trang web -->
+        <div class="container pt-4">
+            <div class="row justify-content-center">
+                <div class="col-xl-5 col-md-8">
+                    <form th:action="@{/admin/brand/update/{id}(id=${brand.maThuongHieu})}" th:object="${brand}" th:method="post"
+                        class="bg-white rounded shadow-5-strong p-5">
+                        <div class="col text-center">
+                            <h3 style="margin-bottom: 40px;">Thêm mới</h3>
+                        </div>
+
+                        <!-- Id Brand -->
+                        <!-- <div class="form-outline mb-4" data-mdb-input-init>
+                            <input type="text" th:field="*{maThuongHieu}" id="form1Example1" class="form-control" />
+                            <label class="form-label" for="form1Example1">Mã Thương Hiệu</label>
+                        </div> -->
+
+                        <!-- Name Brand -->
+                        <div class="form-outline mb-4" data-mdb-input-init>
+                            <input type="text" th:field="*{tenThuongHieu}" id="form1Example1" class="form-control" />
+                            <label class="form-label" for="form1Example1">Tên Thương Hiệu</label>
+                        </div>
+
+                        <!-- Phone Brand -->
+                        <div class="form-outline mb-4" data-mdb-input-init>
+                            <input type="text" th:field="*{soDienThoai}" id="form1Example2" class="form-control" />
+                            <label class="form-label" for="form1Example2">Số Điện Thoại</label>
+                        </div>
+
+                        <!-- Address Brand -->
+                        <div class="form-outline mb-4" data-mdb-input-init>
+                            <input type="text" th:field="*{diaChi}" id="form1Example2" class="form-control" />
+                            <label class="form-label" for="form1Example2">Địa chỉ</label>
+                        </div>
+
+                        <!-- Email Brand -->
+                        <div class="form-outline mb-4" data-mdb-input-init>
+                            <input type="email" th:field="*{email}" id="form1Example2" class="form-control" />
+                            <label class="form-label" for="form1Example2">Email</label>
+                        </div>
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-primary btn-block">Tạo</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- MDB -->
+    <script type="text/javascript" th:src="@{/js/mdb.umd.min.js}"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript"></script>
+</body>
+
+</html>

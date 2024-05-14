@@ -29,6 +29,6 @@ public class CustomerController {
         model.addAttribute("totalPages", pageTuts.getTotalPages());
         model.addAttribute("pageSize", size);
 
-        return "admin/customer";
+        return "admin/customer/customer";
     }
 }

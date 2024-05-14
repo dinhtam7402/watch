@@ -66,6 +66,8 @@ public class SecurityConfig{
                 .sessionManagement(session ->
                         session.maximumSessions(1)
                                 .maxSessionsPreventsLogin(true));
+//        http.authorizeHttpRequests(auth ->
+//                auth.anyRequest().permitAll());
         return http.build();
     }
 }

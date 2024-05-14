@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Đồng Hồ Chính Hãng</title>
+    <!-- MDB icon -->
+    <link rel="icon" th:href="@{/img/mdb-favicon.ico}" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css}" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet"
+        th:href="@{https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap}" />
+    <!-- MDB -->
+    <link rel="stylesheet" th:href="@{/css/mdb.min.css}" />
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <nav th:fragment="sidebaradmin" class="position-fixed navbar navbar-expand-lg navbar-light bg-white"
+        style="width: 210px; height: 100%;">
+        <div class="list-group list-group-flush mx-3 mt-4" style="position:fixed; top: 58px; left: 0;">
+            <a th:href="@{/admin/}" class="list-group-item list-group-item-action py-2" data-mdb-ripple-init
+                aria-current="true">
+                <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Dashboard</span></a>
+            <a href="#" class="list-group-item list-group-item-action py-2" data-mdb-ripple-init><i
+                    class="fas fa-user-plus fa-fw me-3"></i><span>Tài khoản</span></a>
+            <a th:href="@{/admin/brand/}" class="list-group-item list-group-item-action py-2" data-mdb-ripple-init><i
+                    class="fas fa-copyright fa-fw me-3"></i><span>Thương hiệu</span></a>
+            <a th:href="@{/admin/customer/}" class="list-group-item list-group-item-action py-2" data-mdb-ripple-init><i
+                    class="fas fa-person fa-fw me-3"></i><span>Khách hàng</span></a>
+            <a th:href="@{/admin/product/}" class="list-group-item list-group-item-action py-2" data-mdb-ripple-init><i
+                    class="fab fa-product-hunt fa-fw me-3"></i><span>Sản phẩm</span></a>
+            <a th:href="@{/admin/invoice/}" class="list-group-item list-group-item-action py-2" data-mdb-ripple-init><i
+                    class="fas fa-file-invoice-dollar fa-fw me-3"></i><span>Hóa đơn</span></a>
+        </div>
+    </nav>
+    <!-- Sidebar -->
+
+    <!-- Navbar -->
+    <nav th:fragment="navbaradmin" id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+            <!-- Brand -->
+            <a class="navbar-brand" th:href="@{/}" style="margin: 0 15px;">
+                <img th:src="@{https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png}" height="32" alt=""
+                    loading="lazy" />
+            </a>
+
+            <div class="d-flex align-items-center" style="margin: 0 15px;">
+                <div class="ms-auto" style="font-size: 24px">
+                    <a class="text-muted" th:href="@{/logout}">
+                        <i class="fas fa-right-from-bracket"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+
+
+    <!-- MDB -->
+    <script type="text/javascript" th:src="@{/js/mdb.umd.min.js}"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript"></script>
+</body>
+
+</html>

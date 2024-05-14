@@ -27,6 +27,6 @@ public class ProductController {
         model.addAttribute("totalPages", pageTuts.getTotalPages());
         model.addAttribute("pageSize", size);
 
-        return "admin/product";
+        return "admin/product/product";
     }
 }
