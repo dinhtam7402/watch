@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Đồng Hồ Chính Hãng</title>
+    <title>Thêm Thương Hiệu Mới</title>
     <!-- MDB icon -->
     <link rel="icon" th:href="@{/img/mdb-favicon.ico}" type="image/x-icon" />
     <!-- Font Awesome -->
@@ -35,7 +35,7 @@
                     <form th:action="@{/admin/brand/save}" th:object="${brand}" method="post"
                         class="bg-white rounded shadow-5-strong p-5">
                         <div class="col text-center">
-                            <h3 style="margin-bottom: 40px;">Thêm mới</h3>
+                            <h3 style="margin-bottom: 40px;">Thêm Mới</h3>
                         </div>
 
                         <!-- Id Brand -->
@@ -68,66 +68,12 @@
                             <label class="form-label" for="form1Example2">Email</label>
                         </div>
                         <!-- Submit button -->
-                        <button type="submit" class="btn btn-primary btn-block">Tạo</button>
+                        <button type="submit" class="btn btn-primary btn-block">Lưu</button>
                     </form>
                 </div>
             </div>
         </div>
     </main>
-
-    <!-- Modal -->
-    <div class="modal top fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
-        data-mdb-backdrop="true" data-mdb-keyboard="true">
-        <div class="modal-dialog   modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Thêm Thương Hiệu</h5>
-                    <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form th:action="@{/admin/brand/save}" th:object="${brand}" method="post"
-                        class="bg-white rounded shadow-5-strong p-5">
-                        <div class="col text-center">
-                            <h3 style="margin-bottom: 40px;">Thêm mới</h3>
-                        </div>
-
-                        <!-- Id Brand -->
-                        <!-- <div class="form-outline mb-4" data-mdb-input-init>
-                            <input type="text" th:field="*{maThuongHieu}" id="form1Example1" class="form-control" />
-                            <label class="form-label" for="form1Example1">Mã Thương Hiệu</label>
-                        </div> -->
-
-                        <!-- Name Brand -->
-                        <div class="form-outline mb-4" data-mdb-input-init>
-                            <input type="text" th:field="*{tenThuongHieu}" id="form1Example1" class="form-control" />
-                            <label class="form-label" for="form1Example1">Tên Thương Hiệu</label>
-                        </div>
-
-                        <!-- Phone Brand -->
-                        <div class="form-outline mb-4" data-mdb-input-init>
-                            <input type="text" th:field="*{soDienThoai}" id="form1Example2" class="form-control" />
-                            <label class="form-label" for="form1Example2">Số Điện Thoại</label>
-                        </div>
-
-                        <!-- Address Brand -->
-                        <div class="form-outline mb-4" data-mdb-input-init>
-                            <input type="text" th:field="*{diaChi}" id="form1Example2" class="form-control" />
-                            <label class="form-label" for="form1Example2">Địa chỉ</label>
-                        </div>
-
-                        <!-- Email Brand -->
-                        <div class="form-outline mb-4" data-mdb-input-init>
-                            <input type="email" th:field="*{email}" id="form1Example2" class="form-control" />
-                            <label class="form-label" for="form1Example2">Email</label>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">Tạo</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- MDB -->
     <script type="text/javascript" th:src="@{/js/mdb.umd.min.js}"></script>

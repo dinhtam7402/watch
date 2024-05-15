@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @Getter
@@ -31,4 +32,6 @@ public class HoaDon {
     private String phuongThucThanhToan;
     @Column(name = "trangthai")
     private String trangThai;
+    @OneToMany(mappedBy = "hoaDon", cascade = CascadeType.ALL)
+    private List<ChiTietHoaDon> chiTietHoaDon;
 }

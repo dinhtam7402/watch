@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @Entity
 @Getter
@@ -44,4 +45,6 @@ public class SanPham {
     private String mucChongNuoc;
     @Column(name = "bosuutap")
     private String boSuuTap;
+    @OneToMany(mappedBy = "sanPham", cascade = CascadeType.ALL)
+    private List<ChiTietHoaDon> chiTietHoaDon;
 }

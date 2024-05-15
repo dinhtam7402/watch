@@ -43,31 +43,31 @@ public class SecurityConfig{
     SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http.authenticationProvider(authenticationProvider());
 
-        http.authorizeHttpRequests(auth ->
-                auth.requestMatchers("/admin/**").hasAuthority("ADMIN")
-                        .anyRequest().permitAll()
-        )
-                .formLogin(login ->
-                        login
-                                .loginPage("/login")
-                                .failureUrl("/login?error=true")
-                                .permitAll()
-                                .successHandler(authSuccessHandler)
-                )
-                .logout(logout ->
-                        logout
-                                .invalidateHttpSession(true)
-                                .deleteCookies("JSESSIONID")
-                                .clearAuthentication(true)
-                                .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-                                .logoutSuccessUrl("/?logout")
-                                .permitAll()
-                )
-                .sessionManagement(session ->
-                        session.maximumSessions(1)
-                                .maxSessionsPreventsLogin(true));
 //        http.authorizeHttpRequests(auth ->
-//                auth.anyRequest().permitAll());
+//                auth.requestMatchers("/admin/**").hasAuthority("ADMIN")
+//                        .anyRequest().permitAll()
+//        )
+//                .formLogin(login ->
+//                        login
+//                                .loginPage("/login")
+//                                .failureUrl("/login?error=true")
+//                                .permitAll()
+//                                .successHandler(authSuccessHandler)
+//                )
+//                .logout(logout ->
+//                        logout
+//                                .invalidateHttpSession(true)
+//                                .deleteCookies("JSESSIONID")
+//                                .clearAuthentication(true)
+//                                .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+//                                .logoutSuccessUrl("/?logout")
+//                                .permitAll()
+//                )
+//                .sessionManagement(session ->
+//                        session.maximumSessions(1)
+//                                .maxSessionsPreventsLogin(true));
+        http.authorizeHttpRequests(auth ->
+                auth.anyRequest().permitAll());
         return http.build();
     }
 }

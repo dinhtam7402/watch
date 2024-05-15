@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 @Entity
 @Getter
 @Setter
@@ -23,4 +25,6 @@ public class ThuongHieu {
     private String diaChi;
     @Column(name = "email")
     private String email;
+    @OneToMany(mappedBy = "thuongHieu", cascade = CascadeType.ALL)
+    private List<SanPham> sanPham;
 }

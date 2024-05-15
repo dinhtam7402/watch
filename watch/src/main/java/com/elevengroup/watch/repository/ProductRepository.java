@@ -14,4 +14,7 @@ public interface ProductRepository extends JpaRepository<SanPham, Long> {
     Page<SanPham> findAll(Pageable pageable);
     @Query("SELECT sp FROM SanPham sp WHERE sp.thuongHieu.maThuongHieu = :mathuonghieu")
     List<SanPham> findAllByBrandId(long mathuonghieu);
+
+    @Query("SELECT sp FROM SanPham sp WHERE sp.gioiTinh = :gioiTinh")
+    List<SanPham> findBySex(String gioiTinh);
 }

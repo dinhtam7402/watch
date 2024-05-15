@@ -70,7 +70,7 @@ public class BrandController {
                 updateBrand.setDiaChi(thuongHieu.getDiaChi());
                 updateBrand.setEmail(thuongHieu.getEmail());
 
-                brandRepository.save(thuongHieu);
+                brandRepository.save(updateBrand);
             }
         }
 

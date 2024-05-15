@@ -36,20 +36,22 @@
             <table class="table table-striped table-hover">
                 <thead class="table-info">
                     <tr>
-                        <th>Mã Sản Phẩm</th>
-                        <th>Tên Thương Hiệu</th>
-                        <th>Tên Sản Phẩm</th>
+                        <th>ID</th>
+                        <th>Thương Hiệu</th>
+                        <th>Sản Phẩm</th>
                         <th>Giá</th>
                         <th>Giới Tính</th>
-                        <th>Chất Liệu Dây</th>  
-                        <th>Chất Liệu Mặt Kính</th>
+                        <th>Dây</th>
+                        <th>Mặt Kính</th>
                         <th>Pin</th>
-                        <th>Màu Mặt Số</th>
-                        <th>Màu Vỏ</th>
-                        <th>Hình Dạng Mặt Số</th>
+                        <th>Mặt Số</th>
+                        <th>Vỏ</th>
+                        <th>Hình Dạng</th>
                         <th>Kích Thước</th>
                         <th>Mức Chống Nước</th>
                         <th>Bộ Sưu Tập</th>
+                        <th></th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -68,6 +70,18 @@
                         <td>[[${product.kichThuoc}]]</td>
                         <td>[[${product.mucChongNuoc}]]</td>
                         <td>[[${product.boSuuTap}]]</td>
+                        <td>
+                            <a th:href="@{/admin/product/edit/{id}(id=${product.maSanPham})}"
+                                style="font-size: 18px; margin-right: 10px;" class="text-warning">
+                                <i class="fas fa-pen-to-square"></i>
+                            </a>
+                        </td>
+                        <td>
+                            <a th:href="@{/admin/product/delete/{id}(id=${product.maSanPham})}" style="font-size: 18px;"
+                                class="text-danger">
+                                <i class="fas fa-trash-can"></i>
+                            </a>
+                        </td>
                     </tr>
                 </tbody>
             </table>
