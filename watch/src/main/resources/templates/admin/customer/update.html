@@ -1,0 +1,42 @@
+<!--Modal Edit Customer  -->
+<div th:fragment="editCustomer" class="modal fade" id="editCustomer">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header d-flex justify-content-center">
+                <h1 class="modal-title fs-5" id="editCustomerLabel">Edit Customer</h1>
+            </div>
+            <div class="modal-body">
+                <form method="post">
+                    <div class="mb-3">
+                        <label for="idEditCustomer" class="col-form-label">Mã khách hàng</label>
+                        <input type="text" class="form-control" id="idEditCustomer" name="id">
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="nameEditCustomer" class="col-form-label">Họ tên</label>
+                            <input type="text" class="form-control" id="nameEditCustomer" name="fullName">
+                        </div>
+                        <div class="col">
+                            <label for="phoneEditCustomer" class="col-form-label">Số điện thoại</label>
+                            <input type="text" class="form-control" id="phoneEditCustomer" name="phone">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="addressEditCustomer" class="col-form-label">Địa chỉ</label>
+                        <input type="text" class="form-control" id="addressEditCustomer" name="address">
+                        </div>
+                        <div class="col">
+                            <label for="emailEditCustomer" class="col-form-label">Email</label>
+                            <input type="text" class="form-control" id="emailEditCustomer" name="email">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="saveCustomerChanges">Update</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Modal Edit Customer  -->

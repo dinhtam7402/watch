@@ -1,0 +1,38 @@
+<nav class="navbar bg-body-tertiary" style="height: 140px; padding: 0;">
+    <div class="container-fluid d-flex justify-content-center align-items-center" style="padding: 0 10%;">
+        <div class="row w-100">
+            <th:block sec:authorize="!isAuthenticated">
+                <div class="col d-flex justify-content-end ms-auto">
+                    <a class="login-modal text-muted" href="" style="font-size: 12px; padding: 0 5px;">Đăng nhập</a>
+                    <span style="font-size: 12px;">|</span>
+                    <a class="register-modal text-muted" href="" style="font-size: 12px; padding: 0 5px;">Đăng ký</a>
+                </div>
+            </th:block>
+            <th:block sec:authorize="isAuthenticated">
+                <div class="col d-flex justify-content-end ms-auto">
+                    <a th:href="@{/logout}" style="font-size: 12px; padding: 0 5px;">Đăng xuất</a>
+                </div>
+            </th:block>
+        </div>
+        <div class="row w-100">
+            <div class="col d-flex justify-content-start"></div>
+            <div class="col d-flex justify-content-center">
+                <span style="font-weight: bold; font-size: 50px;">Watch Luxury</span>
+            </div>
+            <div class="col d-flex justify-content-end align-items-center">
+                <form class="d-flex" role="search" style="height: 50%;">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                </form>
+                <a href="" style="font-size: 32px;" class="d-flex justify-content-center align-items-center">
+                    <i class="bi bi-bag-heart" style="color: darkgray;"></i>
+                </a>
+            </div>
+        </div>
+        <div class="row w-100 pt-3">
+            <div class="col-md-3 d-flex justify-content-center align-items-center">THƯƠNG HIỆU</div>
+            <div class="col-md-3 d-flex justify-content-center align-items-center">NAM</div>
+            <div class="col-md-3 d-flex justify-content-center align-items-center">NỮ</div>
+            <div class="col-md-3 d-flex justify-content-center align-items-center">CẶP ĐÔI</div>
+        </div>
+    </div>
+</nav>

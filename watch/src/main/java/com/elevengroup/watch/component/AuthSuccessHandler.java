@@ -17,10 +17,10 @@ public class AuthSuccessHandler implements AuthenticationSuccessHandler {
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
         Set<String> roles = AuthorityUtils.authorityListToSet(authentication.getAuthorities());
 
-        if (roles.contains("ADMIN")) {
-            response.sendRedirect("/admin/");
-        } else {
-            response.sendRedirect("/");
-        }
+        String redirectUrl = roles.contains("ADMIN") ? "/admin/" : "/";
+
+        response.setContentType("application/json");
+        response.setCharacterEncoding("UTF-8");
+        response.getWriter().write("{\"redirectUrl\": \"" + redirectUrl + "\"}");
     }
 }

@@ -1,0 +1,23 @@
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+.nav-item {
+    transition: background-color 0.3s, border-radius 0.3s; /* Smooth transition for background color and border-radius */
+    border-radius: 0.25rem; /* Rounded corners for the li items */
+}
+
+.nav-item:hover {
+    background-color: darkgray; /* Light grey background on hover */
+    border-radius: 5px; /* Round corners on hover */
+}

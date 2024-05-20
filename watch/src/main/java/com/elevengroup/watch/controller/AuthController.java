@@ -1,6 +1,5 @@
 package com.elevengroup.watch.controller;
 
-import com.elevengroup.watch.repository.ProductRepository;
 import com.elevengroup.watch.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -17,9 +16,6 @@ public class AuthController {
     @Autowired
     private UserRepository userRepository;
 
-    @Autowired
-    private ProductRepository productRepository;
-
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String viewIndex(Model model) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
@@ -28,18 +24,6 @@ public class AuthController {
             String username = userDetails.getUsername();
             model.addAttribute("username", username);
         }
-        model.addAttribute("watchmans", productRepository.findBySex("Nam"));
-        model.addAttribute("watchwomans", productRepository.findBySex("Nữ"));
         return "index";
-    }
-
-    @RequestMapping(value = "/signup", method = RequestMethod.GET)
-    public String viewSignup() {
-        return "signup";
-    }
-
-    @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String viewLogin() {
-        return "login";
     }
 }

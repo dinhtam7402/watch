@@ -1,0 +1,35 @@
+<nav th:fragment="page" aria-label="Page navigation customer" class="d-flex align-items-center justify-content-center ">
+    <ul class="pagination pagination-sm" style="margin: 0;">
+        <!-- Previous -->
+        <li class="page-item" th:classappend="${currentPage == 1  ? 'disabled' : ''}">
+            <a class="page-link" aria-label="Previous" th:href="@{'?page=' + ${currentPage - 1}}">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+
+        <!-- Page numbers -->
+        <li class="page-item" th:if="${startPage > 1}">
+            <a class="page-link" th:href="@{'?page=1'}">1</a>
+        </li>
+        <li class="page-item" th:if="${startPage > 2}">
+            <span class="page-link">...</span>
+        </li>
+
+        <li class="page-item" th:each="pageNum : ${pageNumbers}" th:classappend="${pageNum == currentPage  ? 'active' : ''}">
+            <a class="page-link" th:href="@{'?page=' + ${pageNum}}">[[${pageNum}]]</a>
+        </li>
+
+        <li class="page-item" th:if="${endPage < totalPages - 1}">
+            <span class="page-link">...</span>
+        </li>
+        <li class="page-item" th:if="${endPage < totalPages}">
+            <a class="page-link" th:href="@{'?page=' + ${totalPages}}">[[${totalPages}]]</a>
+        </li>
+        
+        <li class="page-item" th:classappend="${currentPage == totalPages ? 'disabled' : ''}">
+            <a class="page-link" aria-label="Next" th:href="@{'?page=' + ${currentPage + 1}}">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+</nav>

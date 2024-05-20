@@ -1,0 +1,36 @@
+<!-- Modal Add Customer -->
+<div th:fragment="addCustomer" class="modal fade" id="addCustomer">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header d-flex justify-content-center">
+                <h1 class="modal-title fs-5" id="addCustomerLabel">Add Customer</h1>
+            </div>
+            <div class="modal-body">
+                <form method="post">
+                    <div class="mb-3">
+                        <label for="idCustomer" class="col-form-label">Mã khách hàng</label>
+                        <input type="text" class="form-control" id="idCustomer" name="id">
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="nameCustomer" class="col-form-label">Họ tên</label>
+                            <input type="text" class="form-control" id="nameCustomer" name="fullName">
+                        </div>
+                        <div class="col">
+                            <label for="phoneCustomer" class="col-form-label">Số điện thoại</label>
+                            <input type="text" class="form-control" id="phoneCustomer" name="phone">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="addressCustomer" class="col-form-label">Địa chỉ</label>
+                        <input type="text" class="form-control" id="addressCustomer" name="address">
+                    </div>
+                </form>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="saveCustomerButton">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Add Customer -->

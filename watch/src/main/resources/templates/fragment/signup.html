@@ -1,0 +1,30 @@
+<div th:fragment="signup" class="modal fade" id="registerModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header d-flex justify-content-center">
+                <div class="modal-title" id="registerLabel" style="font-size: 20px; font-weight: bold;">Register
+                    Login
+                </div>
+            </div>
+            <div class="modal-body">
+                <form method="post" style="padding: 0 10%;">
+                    <div class="mb-3">
+                        <label for="usernameRegister" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="usernameRegister">
+                    </div>
+                    <div class="mb-3">
+                        <label for="passwordRegister" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="passwordRegister">
+                    </div>
+                    <div class="mb-3 d-flex align-items-center">
+                        <span>Don't have an account?</span>
+                        <a class="login-from-signup-modal text-muted" href="" style="font-size: 12px; padding: 0 5px;">Login now!</a>
+                    </div>
+                    <div class="mb-3 d-flex justify-content-center">
+                        <button type="submit" class="btn btn-primary w-100" id="registerPage">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

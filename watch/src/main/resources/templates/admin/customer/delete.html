@@ -1,0 +1,18 @@
+<!-- Modal Delete Customer -->
+<div th:fragment="deleteCustomer" class="modal fade" id="deleteCustomer" data-customer-id="[[${customer.id}]]">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="deleteCustomerLabel">Confirm Delete</h1>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                <button type="button" class="btn btn-danger">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Delete Customer -->

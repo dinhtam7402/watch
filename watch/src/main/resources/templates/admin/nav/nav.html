@@ -1,0 +1,48 @@
+<!-- Navbar -->
+<nav th:fragment="navbar" class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top" style="height: 58px;">
+    <div class="container-fluid d-flex justify-content-center">
+        <div class="row w-100 d-flex align-items-center">
+            <div class="col-auto text-center" style="color: white; font-weight: bold; font-size: 28px;">
+                Watch Luxury
+            </div>
+            <div class="col text-end">
+                <a th:href="@{/logout}">
+                    <i class="bi bi-box-arrow-right" style="color: white; font-size: 24px;"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- Navbar -->
+
+<!-- Sidebar -->
+<div th:fragment="sidebar" class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark"
+    style="width: 280px; height: calc(100vh - 58px); position: fixed; top: 58px;">
+    <ul class="nav nav-pills flex-column mb-auto">
+        <li>
+            <a th:href="@{/admin/}" class="nav-link text-white" th:classappend="${requestURI == '/admin/'} ? 'active' : ''" aria-current="page">
+                <i class="bi bi-house-door"></i>
+                Home
+            </a>
+        </li>
+        <li>
+            <a th:href="@{/admin/customer/}" class="nav-link text-white" th:classappend="${requestURI == '/admin/customer/'} ? 'active' : ''">
+                <i class="bi bi-person-circle"></i>
+                Customer
+            </a>
+        </li>
+        <li>
+            <a th:href="@{/admin/order/}" class="nav-link text-white" th:classappend="${requestURI == '/admin/order/'} ? 'active' : ''">
+                <i class="bi bi-receipt"></i>
+                Order
+            </a>
+        </li>
+        <li>
+            <a th:href="@{/admin/products/}" class="nav-link text-white" th:classappend="${requestURI == '/admin/products/'} ? 'active' : ''">
+                <i class="bi bi-box"></i>
+                Products
+            </a>
+        </li>
+    </ul>
+</div>
+<!-- Sidebar -->

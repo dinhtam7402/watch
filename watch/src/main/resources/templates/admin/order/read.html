@@ -1,0 +1,67 @@
+<!-- Modal Customer Details -->
+<div th:fragment="orderDetails" class="modal fade" id="orderDetails">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header d-flex justify-content-center">
+                <h1 class="modal-title fs-5" id="orderDetailsLabel">Customer Details</h1>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col">
+                        <label class="col-form-label">Mã Hóa Đơn: <strong id="orderId"></strong></label>
+                    </div>
+                    <div class="col">
+                        <label class="col-form-label">Mã Khách Hàng: <strong id="orderCustomerId"></strong></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="col-form-label">Họ Tên: <strong id="orderCustomerFullName"></strong></label>
+                    </div>
+                    <div class="col">
+                        <label class="col-form-label">Địa Chỉ: <strong id="orderCustomerAddress"></strong></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="col-form-label">Số Điện Thoại: <strong id="orderCustomerPhone"></strong></label>
+                    </div>
+                    <div class="col">
+                        <label class="col-form-label">Email: <strong id="orderCustomerEmail"></strong></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="col-form-label">Ngày Đặt: <strong id="orderDate"></strong></label>
+                    </div>
+                    <div class="col">
+                        <label class="col-form-label">Tổng: <strong id="orderTotalAmount"></strong></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="col-form-label">Trạng thái: <strong id="orderStatus"></strong></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="align-middle text-center">Tên Sản Phẩm</th>
+                                    <th class="align-middle text-center">Số Lượng</th>
+                                    <th class="align-middle text-center">Đơn Giá</th>
+                                    <th class="align-middle text-center">Thành Tiền</th>
+                                </tr>
+                            </thead>
+                            <tbody id="productDetails">
+                                <!-- Product details will be injected here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Modal Customer Details -->

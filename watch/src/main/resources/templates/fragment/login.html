@@ -1,0 +1,29 @@
+<div th:fragment="login" class="modal fade" id="loginModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header d-flex justify-content-center">
+                <div class="modal-title" id="loginLabel" style="font-size: 20px; font-weight: bold;">Form Login
+                </div>
+            </div>
+            <div class="modal-body">
+                <form method="post" style="padding: 0 10%;">
+                    <div class="mb-3">
+                        <label for="usernameLogin" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="usernameLogin">
+                    </div>
+                    <div class="mb-3">
+                        <label for="passwordLogin" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="passwordLogin">
+                    </div>
+                    <div class="mb-3 d-flex align-items-center">
+                        <span>Don't have an account?</span>
+                        <a class="register-modal text-muted" href="" style="font-size: 12px; padding: 0 5px;">Sign up</a>
+                    </div>
+                    <div class="mb-3 d-flex justify-content-center">
+                        <button type="submit" class="btn btn-primary w-100" id="loginPage">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

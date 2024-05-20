@@ -1,0 +1,68 @@
+<!-- Modal Product Details -->
+<div th:fragment="productDetails" class="modal fade" id="productDetails">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header d-flex justify-content-center">
+                <h1 class="modal-title fs-5" id="productDetailsLabel">Product Details</h1>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col">
+                        <label class="col-form-label">Image Url: <strong id="imgUrl"></strong></label>
+                    </div>
+                    <div class="col">
+                        <label class="col-form-label">Dial Color: <strong id="dialColor"></strong></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="col-form-label">Case Material: <strong id="caseMaterial"></strong></label>
+                    </div>
+                    <div class="col">
+                        <label class="col-form-label">Strap Material: <strong id="strapMaterial"></strong></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="col-form-label">Movement Type: <strong id="movementType"></strong></label>
+                    </div>
+                    <div class="col">
+                        <label class="col-form-label">Water Resistance: <strong id="waterResistance"></strong></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="col-form-label">Case Diameter: <strong id="caseDiameter"></strong></label>
+                    </div>
+                    <div class="col">
+                        <label class="col-form-label">Case Thickness: <strong id="caseThickness"></strong></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="col-form-label">Power Reserve: <strong id="powerReserve"></strong></label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="align-middle text-center">ID</th>
+                                    <th class="align-middle text-center">Rating</th>
+                                    <th class="align-middle text-center">Comment</th>
+                                    <th class="align-middle text-center">Create At</th>
+                                    <th class="align-middle text-center">User</th>
+                                </tr>
+                            </thead>
+                            <tbody id="reviewDetails">
+                                <!-- Product details will be injected here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Modal Customer Details -->
