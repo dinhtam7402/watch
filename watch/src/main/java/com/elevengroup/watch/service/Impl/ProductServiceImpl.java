@@ -1,7 +1,6 @@
 package com.elevengroup.watch.service.Impl;
 
 import com.elevengroup.watch.entity.Products;
-import com.elevengroup.watch.repository.CustomerRepository;
 import com.elevengroup.watch.repository.ProductRepository;
 import com.elevengroup.watch.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,5 +29,23 @@ public class ProductServiceImpl implements ProductService {
     public Products getProductsById(String id) {
         Optional<Products> optionalProducts = productRepository.findById(id);
         return optionalProducts.orElse(null);
+    }
+
+    @Override
+    public Optional<Products> findProductById(String id) {
+        return productRepository.findById(id);
+    }
+
+    @Override
+    public Products saveProduct(Products products) {
+        return productRepository.save(products);
+    }
+
+    @Override
+    public void deleteProductById(String id) {
+        Optional<Products> product = productRepository.findById(id);
+        if (product.isPresent()) {
+            productRepository.deleteById(id);
+        }
     }
 }

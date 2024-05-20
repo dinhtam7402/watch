@@ -22,7 +22,7 @@ public class CustomerApi {
     @Autowired
     private CustomerRepository customerRepository;
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> deleteCustomer(@PathVariable String id) {
         try {
             customerRepository.deleteById(id);

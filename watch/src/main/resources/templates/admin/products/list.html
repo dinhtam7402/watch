@@ -60,21 +60,12 @@
                             <a href="" class="view-product" th:attr="data-id=${product.id}">
                                 <i class="bi bi-eye-fill text-primary" style="font-size: 20px"></i>
                             </a>
-                            <!-- <a href="" class="update-product" 
-                                th:attr="   data-id=${order.id}, 
-                                            data-customerid=${order.customer != null ? order.customer.id : ''}, 
-                                            data-customerfullname=${order.customer != null ? order.customer.fullName : ''}, 
-                                            data-customeraddress=${order.customer != null ? order.customer.address : ''}, 
-                                            data-customerphone=${order.customer != null ? order.customer.phone : ''}, 
-                                            data-customeremail=${order.customer != null ? order.customer.email : ''}, 
-                                            data-orderdate=${order.orderDate}, 
-                                            data-totalamount=${order.totalAmount}, 
-                                            data-status=${order.status}">
+                            <a href="" class="update-product" th:attr="data-id=${product.id}">
                                 <i class="bi bi-pencil-square text-warning" style="font-size: 20px"></i>
                             </a>
-                            <a href="" class="delete-product" th:data-id="${order.id}">
+                            <a href="" class="delete-product" th:data-id="${product.id}">
                                 <i class="bi bi-trash3-fill text-danger" style="font-size: 20px"></i>
-                            </a> -->
+                            </a>
                         </td>
                     </tr>
                 </tbody>
@@ -94,9 +85,11 @@
     <!-- Modal Add Order -->
 
     <!-- Modal Edit Order  -->
+    <div th:replace="admin/products/update :: editProduct"></div>
     <!-- Modal Edit Order  -->
 
     <!-- Modal Delete Order -->
+    <div th:replace="admin/products/delete :: deleteProduct"></div>
     <!-- Modal Delete Order -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

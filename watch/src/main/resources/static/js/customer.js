@@ -54,7 +54,7 @@ $(document).ready(function () {
 
         // AJAX request to delete the customer
         $.ajax({
-            url: '/api/customer/' + customerId,  // Adjusted URL to match the Spring Boot route
+            url: '/api/customer/delete/' + customerId,  // Adjusted URL to match the Spring Boot route
             type: 'DELETE',  // Adjusted HTTP method to DELETE as defined in the Spring Boot controller
             success: function (response) {
                 // Handle the response from the server

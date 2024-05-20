@@ -1,0 +1,92 @@
+<!--Modal Edit Product  -->
+<div th:fragment="editProduct" class="modal fade" id="editProduct">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header d-flex justify-content-center">
+                <h1 class="modal-title fs-5" id="editProductLabel">Edit Product</h1>
+            </div>
+            <div class="modal-body">
+                <form method="post">
+                    <div class="mb-3">
+                        <label for="idEditProduct" class="col-form-label">ID</label>
+                        <input type="text" class="form-control" id="idEditProduct" name="id">
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="nameEditProduct" class="col-form-label">Name</label>
+                            <input type="text" class="form-control" id="nameEditProduct" name="name">
+                        </div>
+                        <div class="col">
+                            <label for="descriptionEditProduct" class="col-form-label">Description</label>
+                            <input type="text" class="form-control" id="descriptionEditProduct" name="description">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="brandEditProduct" class="col-form-label">Brand</label>
+                        <input type="text" class="form-control" id="brandEditProduct" name="brand">
+                        </div>
+                        <div class="col">
+                            <label for="imgUrlEditProduct" class="col-form-label">Image Url</label>
+                            <input type="text" class="form-control" id="imgUrlEditProduct" name="imgUrl">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="dialColorEditProduct" class="col-form-label">Dial Color</label>
+                        <input type="text" class="form-control" id="dialColorEditProduct" name="dialColor">
+                        </div>
+                        <div class="col">
+                            <label for="priceEditProduct" class="col-form-label">Price</label>
+                            <input type="text" class="form-control" id="priceEditProduct" name="price">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="soldEditProduct" class="col-form-label">Sold</label>
+                        <input type="text" class="form-control" id="soldEditProduct" name="sold">
+                        </div>
+                        <div class="col">
+                            <label for="caseMaterialEditProduct" class="col-form-label">Case Material</label>
+                            <input type="text" class="form-control" id="caseMaterialEditProduct" name="caseMaterial">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="movementTypeEditProduct" class="col-form-label">Movement Type</label>
+                        <input type="text" class="form-control" id="movementTypeEditProduct" name="movementType">
+                        </div>
+                        <div class="col">
+                            <label for="strapMaterialEditProduct" class="col-form-label">Strap Material</label>
+                            <input type="text" class="form-control" id="strapMaterialEditProduct" name="strapMaterial">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="waterResistanceEditProduct" class="col-form-label">Water Resistance</label>
+                        <input type="text" class="form-control" id="waterResistanceEditProduct" name="waterResistance">
+                        </div>
+                        <div class="col">
+                            <label for="caseDiameterEditProduct" class="col-form-label">Case Diameter</label>
+                            <input type="text" class="form-control" id="caseDiameterEditProduct" name="caseDiameter">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="caseThicknessEditProduct" class="col-form-label">Case Thickness</label>
+                        <input type="text" class="form-control" id="caseThicknessEditProduct" name="caseThickness">
+                        </div>
+                        <div class="col">
+                            <label for="powerReserveEditProduct" class="col-form-label">Power Reserve</label>
+                            <input type="text" class="form-control" id="powerReserveEditProduct" name="powerReserve">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="saveProductChanges">Update</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Modal Edit Product  -->
