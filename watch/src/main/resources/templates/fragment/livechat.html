@@ -1,0 +1,23 @@
+<!-- LiveChat -->
+<div th:fragment="liveChatBox" id="liveChatBox" class="card text-center"
+style="width: 24rem; position: fixed; bottom: 0; right: 0; margin-right: 3%; margin-bottom: 10%; display: none;">
+<div class="card-header">
+    <h5 class="card-title">Support Counseling</h5>
+</div>
+<div class="card-body">
+    <p class="card-text">Fill out the form below and start a conversation.</p>
+        <div class="chat-content"></div>
+        <div class="mb-3">
+            <input type="text" class="form-control" id="name" placeholder="Your Name">
+        </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" id="phone" placeholder="Number Phone">
+        </div>
+        <div class="mb-3 input-group-xl">
+            <textarea class="form-control" id="message" placeholder="Message"></textarea>
+        </div>
+        <button class="btn btn-primary" id="send">Send</button>
+    </form>
+</div>
+</div>
+<!-- LiveChat -->

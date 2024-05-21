@@ -13,6 +13,8 @@ public class Customer {
     private String id;
     @Column(name = "fullname")
     private String fullName;
+    @Column(name = "sex")
+    private String sex;
     @Column(name = "address")
     private String address;
     @Column(name = "phone")

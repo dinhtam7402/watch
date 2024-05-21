@@ -1,0 +1,51 @@
+id,name,brand,sex,cost,price,sold,stockQuantity,description,imgUrl,dialColor,caseMaterial,strapMaterial,movementType,waterResistance,caseDiameter,caseThickness,powerReserve
+1,Submariner,Rolex,Gender,26000,40000,361,592,,,Silver,PVD Coating,NATO,Solar Movement,5,37,10,57
+2,Datejust,Rolex,Couple,22750,35000,408,720,,,Silver,Platium,Ceramic,Quartz Movement,20,43,10,52
+3,Daytona,Rolex,Male,65000,100000,163,761,,,Silver,Platium,Ceramic,Quartz Movement,3,41,10,65
+4,Explorer,Rolex,Male,13000,20000,981,105,,,Blue,Titanium,Leather,Mechanical Movement,5,41,11,50
+5,GMT Master II,Rolex,Couple,32500,50000,416,695,,,Black,PVD Coating,Stainless Steel,Kinetic Movement,30,39,9,52
+6,Seamaster,Omega,Couple,6500,10000,247,524,,,Blue,Gold,Stainless Steel,Quartz Movement,3,42,6,72
+7,Speedmaster,Omega,Couple,19500,30000,663,691,,,Blue,Carbon Fiber,Stainless Steel,Kinetic Movement,5,36,11,71
+8,Constellation,Omega,Female,32500,50000,920,184,,,Blue,Stainless Steel,Fabric,Mechanical Movement,30,35,8,66
+9,Aqua Terra,Omega,Female,9750,15000,699,283,,,Blue,Stainless Steel,Silicone,Kinetic Movement,10,34,6,51
+10,De Ville,Omega,Male,19500,30000,312,196,,,Blue,Gold,Ceramic,Kinetic Movement,5,42,10,52
+11,Carrera,TAG Heuer,Female,6500,10000,682,380,,,Blue,PVD Coating,NATO,Spring Drive Movement,10,37,10,56
+12,Monaco,TAG Heuer,Female,5200,8000,914,518,,,Silver,Ceramic,Fabric,Kinetic Movement,3,39,12,59
+13,Aquaracer,TAG Heuer,Female,3250,5000,330,148,,,Blue,PVD Coating,Fabric,Kinetic Movement,3,42,10,48
+14,Formula 1,TAG Heuer,Female,1950,3000,148,320,,,Black,Resin,Stainless Steel,Spring Drive Movement,20,40,9,50
+15,Link,TAG Heuer,Male,2600,4000,269,878,,,Black,Gold,Fabric,Solar Movement,5,43,12,63
+16,Presage,Seiko,Female,1950,3000,711,549,,,Blue,Resin,NATO,Spring Drive Movement,10,35,8,51
+17,Prospex,Seiko,Male,3250,5000,196,319,,,Black,Stainless Steel,Leather,Quartz Movement,10,40,10,71
+18,Astron,Seiko,Male,1950,3000,605,771,,,Black,Gold,Silicone,Solar Movement,20,41,11,50
+19,5 Sports,Seiko,Female,490,750,413,827,,,Black,Gold,NATO,Solar Movement,5,39,10,70
+20,Premier,Seiko,Female,1300,2000,446,856,,,Black,Titanium,Leather,Solar Movement,5,35,9,72
+21,G-Shock,Casio,Male,980,1500,178,834,,,Silver,Titanium,Ceramic,Spring Drive Movement,10,40,7,66
+22,Edifice,Casio,Male,330,500,843,291,,,Blue,Ceramic,Stainless Steel,Quartz Movement,5,34,9,57
+23,Pro Trek,Casio,Female,650,1000,931,939,,,Blue,Gold,Stainless Steel,Spring Drive Movement,3,41,11,61
+24,Baby-G,Casio,Male,130,200,655,835,,,Blue,PVD Coating,Stainless Steel,Quartz Movement,20,42,6,67
+25,Databank,Casio,Male,100,150,810,390,,,Blue,Stainless Steel,NATO,Solar Movement,30,41,6,62
+26,Jules Audemars,Audemars Piguet,Couple,260000,400000,905,473,,,Blue,Stainless Steel,Silicone,Quartz Movement,30,34,11,65
+27,Royal Oak,Audemars Piguet,Couple,65000,100000,519,512,,,Blue,Carbon Fiber,NATO,Mechanical Movement,30,43,12,72
+28,Royal Oak Offshore,Audemars Piguet,Couple,32500,50000,125,130,,,Blue,Carbon Fiber,Silicone,Solar Movement,20,37,10,67
+29,Millenary,Audemars Piguet,Male,130000,200000,674,322,,,Blue,Platium,Silicone,Spring Drive Movement,3,34,6,72
+30,Code 11.59,Audemars Piguet,Female,195000,300000,517,801,,,Blue,Platium,Stainless Steel,Quartz Movement,20,41,7,50
+31,Nautilus,Patek Phillippe,Male,65000,100000,929,238,,,Blue,Stainless Steel,Leather,Solar Movement,10,43,8,49
+32,Aquanaut,Patek Phillippe,Female,39000,60000,592,718,,,Blue,Stainless Steel,Ceramic,Kinetic Movement,10,35,12,67
+33,Calatrava,Patek Phillippe,Male,65000,100000,547,645,,,Blue,Stainless Steel,Stainless Steel,Kinetic Movement,30,39,9,65
+34,Grand Complications,Patek Phillippe,Female,45500,70000,841,373,,,Blue,Gold,Stainless Steel,Spring Drive Movement,3,34,6,66
+35,Twenty~4,Patek Phillippe,Male,39000,60000,899,601,,,Black,Carbon Fiber,Fabric,Kinetic Movement,3,41,7,49
+36,Navitimer,Breitling,Female,9750,15000,126,269,,,Grey,Gold,Stainless Steel,Quartz Movement,30,36,11,60
+37,Chronomat,Breitling,Male,6500,10000,262,274,,,Black,PVD Coating,Leather,Quartz Movement,30,41,6,53
+38,Superocean,Breitling,Male,5200,8000,647,980,,,Blue,PVD Coating,NATO,Quartz Movement,10,42,9,69
+39,Avenger,Breitling,Female,4550,7000,812,564,,,Blue,Resin,Ceramic,Solar Movement,10,36,11,67
+40,Transocean,Breitling,Male,6500,10000,905,502,,,Blue,PVD Coating,Stainless Steel,Solar Movement,20,34,7,54
+41,Tank,Cartier,Male,32500,50000,749,969,,,Black,Resin,Ceramic,Solar Movement,5,39,12,68
+42,Santos,Cartier,Female,45500,70000,633,482,,,Silver,Resin,Fabric,Solar Movement,30,37,12,71
+43,Ballon Bleu,Cartier,Male,19500,30000,691,260,,,Black,Titanium,NATO,Spring Drive Movement,10,41,12,60
+44,Drive de Cartier,Cartier,Female,13000,20000,129,687,,,Black,Platium,Ceramic,Kinetic Movement,10,38,9,64
+45,Panthère,Cartier,Female,13000,20000,594,894,,,Black,Carbon Fiber,NATO,Quartz Movement,5,43,6,49
+46,Big Bang,Hublot,Female,65000,100000,192,586,,,Black,Resin,Stainless Steel,Kinetic Movement,30,34,8,64
+47,Classic Fusion,Hublot,Male,19500,30000,949,351,,,Black,Platium,NATO,Mechanical Movement,20,40,9,67
+48,Spirit of Big Bang,Hublot,Couple,65000,100000,936,430,,,Black,Platium,Leather,Mechanical Movement,10,42,8,70
+49,MP Collection,Hublot,Couple,325000,500000,321,449,,,Black,Resin,Silicone,Kinetic Movement,3,40,10,68
+50,King Power,Hublot,Couple,26000,40000,933,500,,,Black,PVD Coating,Ceramic,Kinetic Movement,10,43,10,72

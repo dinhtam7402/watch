@@ -13,21 +13,25 @@ public class Products {
     private String id;
     @Column(name = "name")
     private String name;
-    @Column(name = "description")
-    private String description;
     @Column(name = "brand")
     private String brand;
-    @Column(name = "imgurl")
-    private String imgUrl;
-    @Column(name = "dialcolor")
-    private String dialColor;
+    @Column(name = "sex")
+    private String sex;
+    @Column(name = "cost")
+    private Integer cost;
     @Column(name = "price")
     private Integer price;
     @Column(name = "sold")
     private Integer sold;
     @Column(name = "stockquantity")
     private Integer stockQuantity;
+    @Column(name = "imgurl")
+    private String imgUrl;
+    @Column(name = "description")
+    private String description;
 
+    @Column(name = "dialcolor")
+    private String dialColor;
     @Column(name = "casematerial")
     private String caseMaterial;
     @Column(name = "strapmaterial")
